@@ -12,11 +12,36 @@ public class PerfectNumberDetectorTest {
 	
 	@Test
 	public void returnsNumberIsNotPerfectFromDetectPerfectNumberWhenInputIs0(){
-		assertEquals("Input Number is not a Perfect Number.", classToUnitTest.determinePerfectNumber(0));
+		assertFalse(classToUnitTest.determinePerfectNumber(0));
 	}
 	
 	@Test
-	public void returnsResponseFromDetectPerfectNumberWhenInputIs0GreaterThan0(){
-		assertEquals("Input Number is a Perfect Number.", classToUnitTest.determinePerfectNumber(6));
+	public void returnsResponseFromDetectPerfectNumberWhenInputIsAPerfectNumber(){
+		assertTrue(classToUnitTest.determinePerfectNumber(6));
+	}
+	
+	@Test
+	public void returnsResponseFromDetectPerfectNumberWhenInputIsNotAPerfectNumber(){
+		assertFalse(classToUnitTest.determinePerfectNumber(9));
+	}
+	
+	@Test
+	public void returnsResponseFromDetectPerfectNumberWhenInputIsAPerfectNumberScneario2(){
+		assertTrue(classToUnitTest.determinePerfectNumber(8128));
+	}
+	
+	@Test
+	public void returnsResponseFromDetectPerfectNumberWhenInputIsNotAPerfectNumberScenario2(){
+		assertFalse(classToUnitTest.determinePerfectNumber(8200));
+	}
+	
+	@Test
+	public void returnsTrueFromIsNumberPerfectWhenInputIsAPerfectNumber(){
+		assertTrue(classToUnitTest.isNumberPerfect(496));
+	}
+	
+	@Test
+	public void returnsFalseFromIsNumberPerfectWhenInputIsNotAPerfectNumber(){
+		assertFalse(classToUnitTest.isNumberPerfect(497));
 	}
 }

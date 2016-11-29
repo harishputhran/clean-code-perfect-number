@@ -12,19 +12,19 @@ public class PerfectNumberDetector {
 	 * Method to determine if an input number is perfect or not.
 	 * 
 	 * @param int
-	 * @return String
+	 * @return boolean
 	 */
-	public String determinePerfectNumber(int numberToCheckForPerfectNumber){				
-		return (numberToCheckForPerfectNumber == 0) ? "Input Number is not a Perfect Number." : isNumberPerfect(numberToCheckForPerfectNumber);
+	public boolean determinePerfectNumber(int numberToCheckForPerfectNumber){				
+		return (numberToCheckForPerfectNumber == 0) ? Boolean.FALSE : isNumberPerfect(numberToCheckForPerfectNumber);
 	}
 
 	/**
 	 * Method consisting of the logic to determine a Perfect Number.
 	 * 
 	 * @param int
-	 * @return String
+	 * @return boolean
 	 */
-	public String isNumberPerfect(int number) {
+	public boolean isNumberPerfect(int number) {
 		int sumOfDivisorsOfANumber = 0;
 		int numberToDivideInputNumber = 1;
 		
@@ -33,7 +33,7 @@ public class PerfectNumberDetector {
 				sumOfDivisorsOfANumber += numberToDivideInputNumber;
 			}
 			numberToDivideInputNumber++;
-		}		
-		return (number == sumOfDivisorsOfANumber) ? "Input Number is a Perfect Number." : "Input Number is not a Perfect Number.";
+		}	
+		return (number == sumOfDivisorsOfANumber) ? Boolean.TRUE : Boolean.FALSE;
 	}
 }
