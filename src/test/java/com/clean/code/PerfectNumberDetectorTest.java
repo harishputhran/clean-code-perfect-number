@@ -11,7 +11,7 @@ public class PerfectNumberDetectorTest {
 	PerfectNumberDetector classToUnitTest = new PerfectNumberDetector();
 	
 	@Test
-	public void returnsNullFromDetectPerfectNumber(){
-		assertNull(classToUnitTest.determinePerfectNumber(0));
+	public void returnsNumberIsNotPerfectFromDetectPerfectNumberWhenInputIs0(){
+		assertEquals("Input Number is not a Perfect Number.", classToUnitTest.determinePerfectNumber(0));
 	}
 }
