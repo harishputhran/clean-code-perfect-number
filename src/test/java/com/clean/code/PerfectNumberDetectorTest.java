@@ -12,6 +12,6 @@ public class PerfectNumberDetectorTest {
 	
 	@Test
 	public void returnsNullFromDetectPerfectNumber(){
-		assertNotNull(classToUnitTest.determinePerfectNumber(0));
+		assertNull(classToUnitTest.determinePerfectNumber(0));
 	}
 }
