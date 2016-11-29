@@ -14,4 +14,9 @@ public class PerfectNumberDetectorTest {
 	public void returnsNumberIsNotPerfectFromDetectPerfectNumberWhenInputIs0(){
 		assertEquals("Input Number is not a Perfect Number.", classToUnitTest.determinePerfectNumber(0));
 	}
+	
+	@Test
+	public void returnsResponseFromDetectPerfectNumberWhenInputIs0GreaterThan0(){
+		assertEquals("Input Number is a Perfect Number.", classToUnitTest.determinePerfectNumber(6));
+	}
 }
